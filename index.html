@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. AMAN - Loving Animal Care</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="lang-switcher">
+            <button onclick="toggleLanguage()">EN / AR</button>
+        </div>
+        
+        <div class="header-content">
+            <div class="profile-logo">
+                <img src="images/logo.png" alt="Dr. AMAN Logo">
+            </div>
+            <h1 class="ar-text">الدكتور أمان - رعاية حيوانية بمحبة</h1>
+            <h1 class="en-text hidden">Dr. AMAN - Loving Animal Care</h1>
+            <p class="ar-text">لأن الحيوانات تستحق حياة أفضل</p>
+            <p class="en-text hidden">Because animals deserve a better life</p>
+        </div>
+        <a href="#donate-section" class="donate-button ar-text">تبرّع الآن <i class="fas fa-hand-holding-heart button-icon"></i></a>
+        <a href="#donate-section" class="donate-button en-text hidden">Donate Now <i class="fas fa-hand-holding-heart button-icon"></i></a>
+    </header>
+
+    <main>
+        <div class="ar-text">
+            <section class="vision-section fade-in">
+                <div class="section-image-container">
+                    <img src="images/vision.jpg" alt="صورة توضيحية للرؤية">
+                </div>
+                <div class="section-text-content">
+                    <h2><i class="fas fa-eye section-icon"></i> الرؤية</h2>
+                    <p><i class="fas fa-paw text-icon"></i> أسعى بصفتي د. أمان إلى أن أكون شخصية ملهمة ورائدة في مجال الطب البيطري والرفق بالحيوان، بحيث لا يقتصر دوري على معالجة الأمراض وتقديم الرعاية الطبية، بل يمتد إلى بناء وعي مجتمعي عميق بأهمية الرحمة بالحيوانات والتعامل معها ككائنات تستحق الحياة الكريمة. أطمح إلى ترسيخ ثقافة المسؤولية تجاه الحيوانات في مجتمعنا، وأن أساهم في بناء بيئة إنسانية أكثر عدلاً ورحمة، يكون فيها الرفق بالحيوان جزءا من قيمنا اليومية وسلوكياتنا العملية.</p>
+                </div>
+            </section>
+            <section class="mission-section fade-in">
+                <div class="section-text-content">
+                    <h2><i class="fas fa-lightbulb section-icon"></i> الرسالة</h2>
+                    <p><i class="fas fa-dog text-icon"></i> أضع أمامي رسالة إنسانية ومهنية تقوم على تقديم خدمات بيطرية متكاملة وعالية الجودة للحيوانات، إلى جانب إنقاذ ورعاية تلك التي تتعرض للإهمال أو الخطر. <i class="fas fa-cat text-icon"></i> أؤمن أن مهمتي لا تتوقف عند حدود العيادة، بل تشمل نشر التوعية المجتمعية حول حقوق الحيوانات واحتياجاتها الأساسية، وتشجيع الناس على تبني ممارسات أكثر مسؤولية ورحمة. <i class="fas fa-horse text-icon"></i> كما أعمل على مد جسور التعاون مع مختلف الأطراف، سواء كانوا أفرادًا أو مؤسسات محلية ودولية، من أجل خلق شبكة دعم قوية تساهم في رفع مستوى الوعي والعمل الفعال لحماية الحيوانات وتحسين ظروف حياتها.</p>
+                </div>
+                <div class="section-image-container">
+                    <img src="images/mission.jpg" alt="صورة توضيحية للرسالة">
+                </div>
+            </section>
+            <section class="objectives fade-in">
+                <div class="section-image-container">
+                    <img src="images/objectives.jpg" alt="صورة توضيحية للأهداف">
+                </div>
+                <div class="section-text-content">
+                    <h2><i class="fas fa-bullseye section-icon"></i> الأهداف</h2>
+                    <ul>
+                        <li><i class="fas fa-stethoscope list-icon"></i> توفير الرعاية الصحية الشاملة للحيوانات من خلال التشخيص الدقيق والعلاج الفعال، إضافة إلى تقديم برامج وقائية للحفاظ على صحة الحيوانات على المدى الطويل.</li>
+                        <li><i class="fas fa-shield-alt list-icon"></i> إنقاذ ورعاية الحيوانات المعرضة للخطر: عبر تقديم المأوى المؤقت والدواء المناسب وإعادة تأهيلها لفرص حياة أفضل.</li>
+                        <li><i class="fas fa-hands-helping list-icon"></i> تعزيز الوعي المجتمعي من خلال حملات توعية وورش عمل ومحاضرات موجهة لمختلف الفئات لتصحيح المفاهيم وتعليم الناس أسس التعامل الإنساني مع الحيوانات.</li>
+                        <li><i class="fas fa-home list-icon"></i> التشجيع على التبني المسؤول: تطوير برامج خاصة لتبني الحيوانات تقوم على معايير أخلاقية تضمن لها الاستقرار والرعاية في منازل جديدة.</li>
+                        <li><i class="fas fa-handshake list-icon"></i> بناء شراكات فعالة مع مؤسسات وجمعيات محلية ودولية لتعزيز القضايا المتعلقة بالرفق بالحيوان وتبادل الخبرات والدعم.</li>
+                        <li><i class="fas fa-graduation-cap list-icon"></i> تطوير الجانب المهني عبر التدريب المستمر وتطبيق أحدث ما توصل إليه الطب البيطري عالميا لضمان أفضل الخدمات.</li>
+                        <li><i class="fas fa-leaf list-icon"></i> المساهمة في الاستدامة البيئية من خلال نشر ثقافة التوازن بين الإنسان والحيوان والبيئة، لما لذلك من أثر على الصحة العامة وجودة الحياة.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="en-text hidden">
+            <section class="vision-section fade-in">
+                <div class="section-image-container">
+                    <img src="images/vision.jpg" alt="Vision image">
+                </div>
+                <div class="section-text-content">
+                    <h2><i class="fas fa-eye section-icon"></i> Vision</h2>
+                    <p><i class="fas fa-paw text-icon"></i> I, Dr. Aman, aspire to be an inspiring and leading figure in veterinary medicine and animal welfare. My role is not limited to treating diseases and providing medical care, but extends to building a deep community awareness of the importance of compassion towards animals and treating them as beings deserving of a dignified life. I aim to establish a culture of responsibility towards animals in our society and to contribute to building a more just and compassionate human environment, where kindness to animals is a part of our daily values and practical behaviors.</p>
+                </div>
+            </section>
+            <section class="mission-section fade-in">
+                <div class="section-text-content">
+                    <h2><i class="fas fa-lightbulb section-icon"></i> Mission</h2>
+                    <p><i class="fas fa-dog text-icon"></i> I have a human and professional mission to provide integrated and high-quality veterinary services to animals, in addition to rescuing and caring for those who are neglected or in danger. <i class="fas fa-cat text-icon"></i> I believe that my mission does not stop at the clinic's boundaries, but also includes spreading community awareness about animal rights and their basic needs, and encouraging people to adopt more responsible and compassionate practices. <i class="fas fa-horse text-icon"></i> I also work to build bridges of cooperation with various parties, whether individuals or local and international institutions, to create a strong support network that contributes to raising awareness and effective action to protect animals and improve their living conditions.</p>
+                </div>
+                <div class="section-image-container">
+                    <img src="images/mission.jpg" alt="Mission image">
+                </div>
+            </section>
+            <section class="objectives fade-in">
+                <div class="section-image-container">
+                    <img src="images/objectives.jpg" alt="Objectives image">
+                </div>
+                <div class="section-text-content">
+                    <h2><i class="fas fa-bullseye section-icon"></i> Our Objectives</h2>
+                    <ul>
+                        <li><i class="fas fa-stethoscope list-icon"></i> Providing comprehensive healthcare for animals through accurate diagnosis and effective treatment, in addition to offering preventive programs to maintain animal health in the long term.</li>
+                        <li><i class="fas fa-shield-alt list-icon"></i> Rescuing and caring for animals at risk: by providing temporary shelter, appropriate medicine, and rehabilitation for better life opportunities.</li>
+                        <li><i class="fas fa-hands-helping list-icon"></i> Enhancing community awareness through awareness campaigns, workshops, and lectures aimed at different groups to correct misconceptions and teach people the foundations of humane treatment of animals.</li>
+                        <li><i class="fas fa-home list-icon"></i> Encouraging responsible adoption: developing special programs for animal adoption based on ethical standards that ensure stability and care in new homes.</li>
+                        <li><i class="fas fa-handshake list-icon"></i> Building effective partnerships with local and international institutions and associations to promote animal welfare issues and exchange expertise and support.</li>
+                        <li><i class="fas fa-graduation-cap list-icon"></i> Developing the professional aspect through continuous training and applying the latest global advances in veterinary medicine to ensure the best services.</li>
+                        <li><i class="fas fa-leaf list-icon"></i> Contributing to environmental sustainability by spreading a culture of balance between humans, animals, and the environment, due to its impact on public health and quality of life.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <section class="photo-gallery fade-in">
+            <h2 class="ar-text">ألبوم الصور</h2>
+            <h2 class="en-text hidden">Photo Gallery</h2>
+            <div class="gallery-main-display">
+                <img id="mainGalleryImage" src="images/pet1.jpg" alt="صورة حيوان أليف كبيرة">
+            </div>
+            <p id="imageDescription" class="gallery-description ar-text"></p>
+            <p id="imageDescriptionEn" class="gallery-description en-text hidden"></p>
+            <div class="gallery-thumbnails">
+                <img src="images/pet1.jpg" data-description="كلب سعيد في أحد أيام العائلة الجميلة" data-description-en="A happy dog on a lovely family day" alt="صورة مصغرة لحيوان أليف" class="thumbnail active">
+                <img src="images/pet2.jpg" data-description="كلب تم إنقاذه حديثًا يتلقى الرعاية" data-description-en="A recently rescued dog receiving care" alt="صورة مصغرة لكلب منقذ" class="thumbnail">
+                <img src="images/pet3.jpg" data-description="قط يتلقى علاجًا في العيادة" data-description-en="A cat receiving treatment at the clinic" alt="صورة مصغرة لقط يتلقى الرعاية" class="thumbnail">
+                <img src="images/pet4.jpg" data-description="لحظات مرحة ومحبة بين الحيوانات" data-description-en="Playful and loving moments among animals" alt="صورة مصغرة لحيوانات سعيدة" class="thumbnail">
+                <img src="images/pet5.jpg" data-description="رعاية ومتابعة صحة الحيوانات الأليفة" data-description-en="Caring for and monitoring the health of pets" alt="صورة مصغرة لحيوان أليف آخر" class="thumbnail">
+                <img src="images/pet6.jpg" data-description="حيوان أليف في مأوى آمن ومريح" data-description-en="A pet in a safe and comfortable shelter" alt="صورة مصغرة لحيوان في مأوى" class="thumbnail">
+            </div>
+        </section>
+
+        <section id="donate-section" class="donate-info fade-in">
+            <div class="section-image-container">
+                <img src="images/donate.jpg" alt="صورة توضيحية للتبرع">
+            </div>
+            <div class="section-text-content">
+                <h2 class="ar-text"><i class="fas fa-hands-helping section-icon"></i> ساهم معنا</h2>
+                <h2 class="en-text hidden"><i class="fas fa-hands-helping section-icon"></i> Get Involved</h2>
+                <p class="ar-text">مساهمتك تحدث فرقاً كبيراً في حياة الحيوانات. تبرعك يساعدنا على توفير الطعام، الدواء، والمأوى للحيوانات المحتاجة.</p>
+                <p class="en-text hidden">Your contribution makes a significant difference in the lives of animals. Your donation helps us provide food, medicine, and shelter to animals in need.</p>
+                <div class="button-center">
+                    <a href="#" class="donate-button ar-text">تبرّع لدعم رسالتنا <i class="fas fa-hand-holding-heart button-icon"></i></a>
+                    <a href="#" class="donate-button en-text hidden">Donate to support our mission <i class="fas fa-hand-holding-heart button-icon"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-info fade-in">
+            <div class="section-image-container">
+                <img src="images/contact.jpg" alt="صورة توضيحية للتواصل">
+            </div>
+            <div class="section-text-content">
+                <h2 class="ar-text"><i class="fas fa-headset section-icon"></i> تواصل معنا</h2>
+                <h2 class="en-text hidden"><i class="fas fa-headset section-icon"></i> Contact Us</h2>
+                <div class="contact-details">
+                    <p><i class="fas fa-phone-alt contact-icon"></i> <span class="ar-text en-text">00970568133353</span></p>
+                    <p><i class="fas fa-envelope contact-icon"></i> <a href="mailto:info@dr-aman.com" class="ar-text en-text">info@dr-aman.com</a></p>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://www.facebook.com/yourpage" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/yourpage" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourpage" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/970568133353" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form-section" class="contact-form fade-in">
+            <div class="form-container">
+                <h2 class="ar-text"><i class="fas fa-envelope section-icon"></i> أرسل لنا رسالة</h2>
+                <h2 class="en-text hidden"><i class="fas fa-envelope section-icon"></i> Send Us a Message</h2>
+                <form action="send_email.php" method="POST">
+                    <div class="form-group-wrapper">
+                        <div class="form-group">
+                            <label for="name" class="ar-text" data-label-ar="الاسم:" data-label-en="Name:">الاسم:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="ar-text" data-label-ar="البريد الإلكتروني:" data-label-en="Email:">البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="ar-text" data-label-ar="الموضوع:" data-label-en="Subject:">الموضوع:</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                    </div>
+                    <div class="form-group form-message">
+                        <label for="message" class="ar-text" data-label-ar="الرسالة:" data-label-en="Message:">الرسالة:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <div class="button-center">
+                        <button type="submit" class="ar-text">إرسال الرسالة</button>
+                        <button type="submit" class="en-text hidden">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/970568133353" class="whatsapp-button floating" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer class="main-footer">
+   
+        <p >&copy; 2025 Dr- AMAN - All rights reserved</p>
+    </footer>
+
+    <script>
+        const arDescriptions = {
+            'images/pet1.jpg': 'كلب سعيد في أحد أيام العائلة الجميلة',
+            'images/pet2.jpg': 'كلب تم إنقاذه حديثًا يتلقى الرعاية',
+            'images/pet3.jpg': 'قط يتلقى علاجًا في العيادة',
+            'images/pet4.jpg': 'لحظات مرحة ومحبة بين الحيوانات',
+            'images/pet5.jpg': 'رعاية ومتابعة صحة الحيوانات الأليفة',
+            'images/pet6.jpg': 'حيوان أليف في مأوى آمن ومريح'
+        };
+        const enDescriptions = {
+            'images/pet1.jpg': 'A happy dog on a lovely family day',
+            'images/pet2.jpg': 'A recently rescued dog receiving care',
+            'images/pet3.jpg': 'A cat receiving treatment at the clinic',
+            'images/pet4.jpg': 'Playful and loving moments among animals',
+            'images/pet5.jpg': 'Caring for and monitoring the health of pets',
+            'images/pet6.jpg': 'A pet in a safe and comfortable shelter'
+        };
+
+        function toggleLanguage() {
+            const arElements = document.querySelectorAll('.ar-text');
+            const enElements = document.querySelectorAll('.en-text');
+            const htmlTag = document.querySelector('html');
+            const currentLang = htmlTag.lang;
+            const mainImage = document.getElementById('mainGalleryImage');
+            const labels = document.querySelectorAll('#contact-form-section label');
+            const footer = document.querySelector('.main-footer p');
+
+            if (currentLang === 'ar') {
+                arElements.forEach(el => el.classList.add('hidden'));
+                enElements.forEach(el => el.classList.remove('hidden'));
+                htmlTag.lang = 'en';
+                htmlTag.dir = 'ltr';
+                
+                // تحديث وصف الصورة
+                const currentSrc = mainImage.getAttribute('src');
+                document.getElementById('imageDescriptionEn').textContent = enDescriptions[currentSrc] || '';
+
+                // تحديث تسميات الحقول
+                labels.forEach(label => {
+                    label.textContent = label.getAttribute('data-label-en');
+                });
+            } else {
+                enElements.forEach(el => el.classList.add('hidden'));
+                arElements.forEach(el => el.classList.remove('hidden'));
+                htmlTag.lang = 'ar';
+                htmlTag.dir = 'rtl';
+
+                // تحديث وصف الصورة
+                const currentSrc = mainImage.getAttribute('src');
+                document.getElementById('imageDescription').textContent = arDescriptions[currentSrc] || '';
+
+                // تحديث تسميات الحقول
+                labels.forEach(label => {
+                    label.textContent = label.getAttribute('data-label-ar');
+                });
+            }
+        }
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const hiddenElements = document.querySelectorAll('.fade-in');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        const mainGalleryImage = document.getElementById('mainGalleryImage');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+        const arDescElement = document.getElementById('imageDescription');
+        const enDescElement = document.getElementById('imageDescriptionEn');
+
+        function updateGalleryDescription(thumbnail) {
+            const arDesc = thumbnail.getAttribute('data-description');
+            const enDesc = thumbnail.getAttribute('data-description-en');
+            arDescElement.textContent = arDesc;
+            enDescElement.textContent = enDesc;
+        }
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                document.querySelector('.thumbnail.active')?.classList.remove('active');
+                mainGalleryImage.src = thumbnail.src;
+                thumbnail.classList.add('active');
+                updateGalleryDescription(thumbnail);
+            });
+        });
+        
+        window.addEventListener('load', () => {
+            const firstThumbnail = document.querySelector('.thumbnail.active');
+            if (firstThumbnail) {
+                updateGalleryDescription(firstThumbnail);
+            }
+        });
+    </script>
+</body>
+</html>
