@@ -1,3 +1,29 @@
+.initiatives {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.initiative {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* عشان يشتغل منيح على الموبايل */
+}
+
+.initiative-image img {
+  max-width: 450px;   /* أقصى عرض للصورة */
+  width: 100%;        /* تتناسب مع حجم الشاشة */
+  height: auto;       /* تحافظ على التناسب */
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.initiative-text {
+  flex: 1; /* النص يأخذ باقي المساحة */
+}
+
+
 /* الألوان الأساسية */
 :root {
     --primary-color: #169b62; /* الأخضر الأساسي */
@@ -565,4 +591,5 @@ html[dir="rtl"] .lang-switcher {
         margin-top: 20px; /* زيادة المسافة أعلى الزر على الموبايل */
         margin-bottom: 20px; /* إضافة مسافة أسفل الزر */
     }
+
 }
