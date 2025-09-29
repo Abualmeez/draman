@@ -13,7 +13,7 @@
     
     <style>
         /* New Color Palette: Modern and Impactful */
-        /* Background: #F9FAFB (Gray-50) | Text: #1F2937 (Gray-900) | Heading: #4B5563 (Gray-600) | Highlight/Crisis: #D97706 (Amber-600) | CTA: #059669 (Emerald-600) */
+        /* Background: #F9FAFB (Gray-50) | Text: #1F2937 (Gray-900) | Highlight/Crisis: #D97706 (Amber-600) | CTA: #059669 (Emerald-600) */
         body {
             font-family: 'Inter', sans-serif; /* Default to English font */
             background-color: #F9FAFB;
@@ -38,6 +38,42 @@
         html {
             scroll-behavior: smooth;
         }
+
+        /* Table specific styles for better look on all devices */
+        .data-table th, .data-table td {
+            padding: 12px 10px;
+            text-align: center;
+            border-bottom: 1px solid #E5E7EB; /* Gray-200 */
+        }
+        .data-table th {
+            background-color: #F3F4F6; /* Gray-100 */
+            font-weight: 700;
+            color: #374151; /* Gray-700 */
+        }
+        .data-table tbody tr:hover {
+            background-color: #F9FAFB;
+        }
+        /* Custom Hero Background Style */
+        .hero-bg {
+            background-image: url('4.jpg'); /* Using the uploaded image file name */
+            background-size: cover;
+            background-position: center 60%; /* Adjusted slightly for better focus */
+            background-repeat: no-repeat;
+            position: relative;
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.45); /* Darker overlay for better text readability */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
     </style>
 </head>
 <body class="text-[#1F2937]">
@@ -49,21 +85,24 @@
 
     <main class="container mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Hero Section -->
-        <section class="text-center py-20 sm:py-32">
-            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#374151] leading-tight">
-                <span class="lang-ar hidden">صرخة صامتة من أقفاص غزة</span>
-                <span class="lang-en">Silent Cry from Gaza's Cages</span>
-            </h1>
-            <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-gray-700">
-                <span class="lang-ar hidden">وسط الحرب والحصار، تواجه حيوانات حديقة غزة خطر الموت جوعًا ومرضًا. كانت يومًا مصدر بهجة، والآن هي ضحية منسية تنتظر من ينقذها.</span>
-                <span class="lang-en">Amid war and siege, the animals of Gaza Zoo face starvation and disease. Once a source of joy, they are now forgotten victims awaiting rescue.</span>
-            </p>
-            <div class="mt-10">
-                <a href="#appeal-section" class="bg-[#D97706] hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">
-                    <span class="lang-ar hidden">كيف يمكنك المساعدة؟</span>
-                    <span class="lang-en">How Can You Help?</span>
-                </a>
+        <!-- Hero Section with Background Image -->
+        <section class="hero-bg text-center py-20 sm:py-32 rounded-b-2xl shadow-xl overflow-hidden">
+            <div class="hero-overlay"></div>
+            <div class="hero-content text-white">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight drop-shadow-lg">
+                    <span class="lang-ar hidden">صرخة صامتة من أقفاص غزة</span>
+                    <span class="lang-en">Silent Cry from Gaza's Cages</span>
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl drop-shadow-md">
+                    <span class="lang-ar hidden">وسط الحرب والحصار، تواجه حيوانات حديقة غزة خطر الموت جوعًا ومرضًا. كانت يومًا مصدر بهجة، والآن هي ضحية منسية تنتظر من ينقذها.</span>
+                    <span class="lang-en">Amid war and siege, the animals of Gaza Zoo face starvation and disease. Once a source of joy, they are now forgotten victims awaiting rescue.</span>
+                </p>
+                <div class="mt-10">
+                    <a href="#appeal-section" class="bg-[#D97706] hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-xl">
+                        <span class="lang-ar hidden">كيف يمكنك المساعدة؟</span>
+                        <span class="lang-en">How Can You Help?</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -131,8 +170,178 @@
             </div>
         </section>
 
+        <!-- Animal Roster & Daily Needs Table Section -->
+        <section id="roster-section" class="py-16 bg-white/70 rounded-xl shadow-inner my-12">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
+                    <span class="lang-ar hidden">قائمة الحيوانات والاحتياجات اليومية</span>
+                    <span class="lang-en">Animal Roster & Daily Needs</span>
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    <span class="lang-ar hidden">تفصيل الأعداد والاحتياجات الغذائية اليومية لإظهار حجم المجهود المطلوب.</span>
+                    <span class="lang-en">A breakdown of the animal count and their daily nutritional requirements to show the scale of effort needed.</span>
+                </p>
+            </div>
+            <div class="overflow-x-auto rounded-lg shadow-xl border border-gray-200">
+                <table class="w-full data-table">
+                    <!-- Table Headers (Dynamic) -->
+                    <thead id="table-head">
+                        <!-- Content will be set by JavaScript based on currentLang -->
+                    </thead>
+                    <!-- Table Body (Static Data) -->
+                    <tbody>
+                        <!-- 1. Black Macaque (نسناس أسود) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">نسناس أسود</span>
+                                <span class="lang-en">Black Macaque</span>
+                            </td>
+                            <td>9</td>
+                            <td>
+                                <span class="lang-ar hidden">1 كجم فواكه + خضار</span>
+                                <span class="lang-en">1 kg Fruits + Vegetables</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">9 كجم</span>
+                                <span class="lang-en">9 kg</span>
+                            </td>
+                        </tr>
+                        <!-- 2. Red Macaque (نسناس أحمر) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">نسناس أحمر</span>
+                                <span class="lang-en">Red Macaque</span>
+                            </td>
+                            <td>7</td>
+                            <td>
+                                <span class="lang-ar hidden">1 كجم فواكه + خضار</span>
+                                <span class="lang-en">1 kg Fruits + Vegetables</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">7 كجم</span>
+                                <span class="lang-en">7 kg</span>
+                            </td>
+                        </tr>
+                        <!-- 3. Lions (أسود) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">أسود</span>
+                                <span class="lang-en">Lions</span>
+                            </td>
+                            <td>3</td>
+                            <td>
+                                <span class="lang-ar hidden">10 كجم لحم + 2 لتر ماء</span>
+                                <span class="lang-en">10 kg Meat + 2 L Water</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">30 كجم لحم + 6 لتر ماء</span>
+                                <span class="lang-en">30 kg Meat + 6 L Water</span>
+                            </td>
+                        </tr>
+                        <!-- 4. Baboons (بابون) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">بابون</span>
+                                <span class="lang-en">Baboons</span>
+                            </td>
+                            <td>3</td>
+                            <td>
+                                <span class="lang-ar hidden">3 كجم خضار + فواكه</span>
+                                <span class="lang-en">3 kg Vegetables + Fruits</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">9 كجم</span>
+                                <span class="lang-en">9 kg</span>
+                            </td>
+                        </tr>
+                        <!-- 5. Squirrel (سنجاب) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">سنجاب</span>
+                                <span class="lang-en">Squirrel</span>
+                            </td>
+                            <td>14</td>
+                            <td>
+                                <span class="lang-ar hidden">0.1 كجم مكسرات/حبوب</span>
+                                <span class="lang-en">0.1 kg Nuts/Grains</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">1.4 كجم</span>
+                                <span class="lang-en">1.4 kg</span>
+                            </td>
+                        </tr>
+                        <!-- 6. Eagle (نسر) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">نسر</span>
+                                <span class="lang-en">Eagle</span>
+                            </td>
+                            <td>1</td>
+                            <td>
+                                <span class="lang-ar hidden">0.5 كجم لحم + 0.5 لتر ماء</span>
+                                <span class="lang-en">0.5 kg Meat + 0.5 L Water</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">0.5 كجم لحم + 0.5 لتر ماء</span>
+                                <span class="lang-en">0.5 kg Meat + 0.5 L Water</span>
+                            </td>
+                        </tr>
+                        <!-- 7. Dogs (كلاب) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">كلاب</span>
+                                <span class="lang-en">Dogs</span>
+                            </td>
+                            <td>4</td>
+                            <td>
+                                <span class="lang-ar hidden">0.8 كجم طعام جاف + 0.5 لتر ماء</span>
+                                <span class="lang-en">0.8 kg Dry Food + 0.5 L Water</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">3.2 كجم + 2 لتر ماء</span>
+                                <span class="lang-en">3.2 kg + 2 L Water</span>
+                            </td>
+                        </tr>
+                        <!-- 8. Parrots (ببغاء) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">ببغاء</span>
+                                <span class="lang-en">Parrots</span>
+                            </td>
+                            <td>7</td>
+                            <td>
+                                <span class="lang-ar hidden">0.15 كجم حبوب + فواكه</span>
+                                <span class="lang-en">0.15 kg Grains + Fruits</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">1 كجم</span>
+                                <span class="lang-en">1 kg</span>
+                            </td>
+                        </tr>
+                        <!-- 9. Various Birds (طيور متنوعة) -->
+                        <tr>
+                            <td>
+                                <span class="lang-ar hidden">طيور متنوعة</span>
+                                <span class="lang-en">Various Birds</span>
+                            </td>
+                            <td>110</td>
+                            <td>
+                                <span class="lang-ar hidden">0.05 كجم حبوب لكل طير</span>
+                                <span class="lang-en">0.05 kg Grains per Bird</span>
+                            </td>
+                            <td>
+                                <span class="lang-ar hidden">5.5 كجم</span>
+                                <span class="lang-en">5.5 kg</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
         <!-- Daily Cost Section -->
-        <section id="cost-section" class="py-16 bg-white/70 rounded-xl shadow-inner my-12">
+        <section id="cost-section" class="py-16">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
                     <span class="lang-ar hidden">التكلفة اليومية للبقاء على قيد الحياة</span>
@@ -168,7 +377,7 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery-section" class="py-16">
+        <section id="gallery-section" class="py-16 bg-white/70 rounded-xl shadow-inner my-12">
             <div class="text-center mb-12">
                 <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
                     <span class="lang-ar hidden">صور من قلب المعاناة</span>
@@ -323,12 +532,14 @@
             ar: {
                 labels: ['اللحوم', 'الفواكه والخضروات', 'المكسرات والحبوب', 'المياه النظيفة'],
                 dir: 'rtl',
-                font: "'Tajawal', sans-serif"
+                font: "'Tajawal', sans-serif",
+                tableHeaders: ['النوع', 'العدد', 'الاحتياج الغذائي لكل حيوان', 'إجمالي الاحتياج اليومي']
             },
             en: {
                 labels: ['Meat', 'Fruits & Vegetables', 'Nuts/Grains', 'Clean Water'],
                 dir: 'ltr',
-                font: "'Inter', sans-serif"
+                font: "'Inter', sans-serif",
+                tableHeaders: ['Type', 'Count', 'Daily Requirement per Animal', 'Total Daily Requirement']
             }
         };
 
@@ -341,6 +552,23 @@
             '#1F2937'  // Gray-900 
         ];
 
+        function updateTableHeaders(lang) {
+            const head = document.getElementById('table-head');
+            const headers = langData[lang].tableHeaders;
+            
+            // Generate new header row
+            const headerRow = document.createElement('tr');
+            headers.forEach(text => {
+                const th = document.createElement('th');
+                th.textContent = text;
+                headerRow.appendChild(th);
+            });
+            
+            // Clear and append
+            head.innerHTML = '';
+            head.appendChild(headerRow);
+        }
+
         function createOrUpdateChart(lang) {
             const labels = langData[lang].labels;
             const font = langData[lang].font;
@@ -351,7 +579,6 @@
                 costChart.options.plugins.legend.labels.font.family = font;
                 costChart.options.plugins.tooltip.bodyFont.family = font;
                 costChart.options.plugins.tooltip.titleFont.family = font;
-                // Important: Update RTL/LTR settings for chart tooltip
                 costChart.options.plugins.tooltip.rtl = lang === 'ar';
                 costChart.options.plugins.tooltip.textDirection = lang === 'ar' ? 'rtl' : 'ltr';
                 costChart.update();
@@ -363,7 +590,7 @@
                     datasets: [{
                         data: rawData,
                         backgroundColor: backgroundColors,
-                        borderColor: '#F9FAFB', // Match new background color
+                        borderColor: '#F9FAFB', 
                         borderWidth: 4,
                         hoverOffset: 8
                     }]
@@ -387,7 +614,6 @@
                                 }
                             },
                             tooltip: {
-                                // Dynamic RTL/LTR configuration
                                 rtl: lang === 'ar',
                                 textDirection: lang === 'ar' ? 'rtl' : 'ltr',
                                 callbacks: {
@@ -435,18 +661,20 @@
             // Update button text
             toggleButton.textContent = currentLang === 'en' ? 'عربي' : 'EN';
 
-            // Ensure text alignment adjusts for LTR/RTL in flexible layouts
+            // Update Table Headers
+            updateTableHeaders(currentLang);
+
+            // Adjust flex direction for icon/text layout in Appeal section
             document.querySelectorAll('#appeal-section > .mt-10 > div').forEach(el => {
-                // Check if it's a card in the appeal section
                 if (window.innerWidth >= 768) {
-                    // Adjust flex direction for icon/text layout based on direction
                     el.style.flexDirection = currentLang === 'ar' ? 'row-reverse' : 'row';
                 }
             });
 
             // Adjust text alignment for the text block in the Cost Section
-            document.querySelector('#cost-section .lg\\:text-left').classList.remove('lg:text-right', 'lg:text-left');
-            document.querySelector('#cost-section .lg\\:text-left').classList.add(currentLang === 'ar' ? 'lg:text-right' : 'lg:text-left');
+            const costTextBlock = document.querySelector('#cost-section .lg\\:text-left');
+            costTextBlock.classList.remove('lg:text-right', 'lg:text-left');
+            costTextBlock.classList.add(currentLang === 'ar' ? 'lg:text-right' : 'lg:text-left');
 
 
             createOrUpdateChart(currentLang);
@@ -455,11 +683,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Initial chart creation in English (default language)
             createOrUpdateChart(currentLang);
+            
+            // Initial table header creation
+            updateTableHeaders(currentLang);
 
             // Setup language toggle listener
             document.getElementById('lang-toggle').addEventListener('click', switchLanguage);
             
             // Initial setup for directional alignment on load
+            // Note: We use .lg\\:text-left because Tailwind converts lg:text-left to CSS class lg\:text-left in the DOM
             document.querySelector('#cost-section .lg\\:text-left').classList.add('lg:text-left'); 
             document.querySelectorAll('#appeal-section > .mt-10 > div').forEach(el => {
                 el.style.flexDirection = 'row'; // Default English/LTR
