@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أزمة حديقة حيوان غزة - نداء عاجل | Gaza Zoo Crisis - Urgent Appeal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Inter for English (default) and Tajawal for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* New Color Palette: Modern and Impactful */
+        /* Background: #F9FAFB (Gray-50) | Text: #1F2937 (Gray-900) | Heading: #4B5563 (Gray-600) | Highlight/Crisis: #D97706 (Amber-600) | CTA: #059669 (Emerald-600) */
+        body {
+            font-family: 'Inter', sans-serif; /* Default to English font */
+            background-color: #F9FAFB;
+        }
+        .lang-ar {
+            font-family: 'Tajawal', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="text-[#1F2937]">
+    
+    <!-- Language Toggle Button -->
+    <button id="lang-toggle" class="fixed top-4 right-4 z-50 bg-[#374151] text-white font-bold py-2 px-4 rounded-full shadow-lg hover:bg-[#1F2937] transition">
+        عربي
+    </button>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Hero Section -->
+        <section class="text-center py-20 sm:py-32">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#374151] leading-tight">
+                <span class="lang-ar hidden">صرخة صامتة من أقفاص غزة</span>
+                <span class="lang-en">Silent Cry from Gaza's Cages</span>
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-gray-700">
+                <span class="lang-ar hidden">وسط الحرب والحصار، تواجه حيوانات حديقة غزة خطر الموت جوعًا ومرضًا. كانت يومًا مصدر بهجة، والآن هي ضحية منسية تنتظر من ينقذها.</span>
+                <span class="lang-en">Amid war and siege, the animals of Gaza Zoo face starvation and disease. Once a source of joy, they are now forgotten victims awaiting rescue.</span>
+            </p>
+            <div class="mt-10">
+                <a href="#appeal-section" class="bg-[#D97706] hover:bg-amber-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">
+                    <span class="lang-ar hidden">كيف يمكنك المساعدة؟</span>
+                    <span class="lang-en">How Can You Help?</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- The Crisis at a Glance -->
+        <section id="crisis-section" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
+                    <span class="lang-ar hidden">الأزمة في أربعة جوانب</span>
+                    <span class="lang-en">The Crisis in Four Dimensions</span>
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    <span class="lang-ar hidden">الحياة في الحديقة تفتقر لأبسط المقومات. هذه هي التحديات اليومية التي تواجهها الحيوانات.</span>
+                    <span class="lang-en">Life at the zoo lacks basic necessities. These are the daily challenges faced by the animals.</span>
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Crisis Card 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center transition-transform hover:scale-[1.02]">
+                    <div class="text-5xl mb-4">🍽️</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#D97706]">
+                        <span class="lang-ar hidden">الجوع وسوء التغذية</span>
+                        <span class="lang-en">Starvation and Malnutrition</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-ar hidden">نقص حاد في الغذاء المناسب يؤدي إلى هزال شديد وخطر الموت البطيء.</span>
+                        <span class="lang-en">Severe lack of proper food leading to extreme emaciation and risk of slow death.</span>
+                    </p>
+                </div>
+                <!-- Crisis Card 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center transition-transform hover:scale-[1.02]">
+                    <div class="text-5xl mb-4">⚕️</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#D97706]">
+                        <span class="lang-ar hidden">انعدام الرعاية البيطرية</span>
+                        <span class="lang-en">Lack of Veterinary Care</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-ar hidden">لا أدوية، لا لقاحات، ولا أي خدمات طبية، مما يترك الأمراض تنتشر بلا رحمة.</span>
+                        <span class="lang-en">No medicines, no vaccines, and no medical services, allowing diseases to spread mercilessly.</span>
+                    </p>
+                </div>
+                <!-- Crisis Card 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center transition-transform hover:scale-[1.02]">
+                    <div class="text-5xl mb-4">💣</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#D97706]">
+                        <span class="lang-ar hidden">خطر القصف المستمر</span>
+                        <span class="lang-en">Constant Bombing Threat</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-ar hidden">الحيوانات والعائلة الراعية لها تحت تهديد مباشر ومستمر بالخطر والموت.</span>
+                        <span class="lang-en">Animals and their caretakers are under direct and continuous threat of danger and death.</span>
+                    </p>
+                </div>
+                <!-- Crisis Card 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-100 text-center transition-transform hover:scale-[1.02]">
+                    <div class="text-5xl mb-4">⚠️</div>
+                    <h3 class="font-bold text-xl mb-2 text-[#D97706]">
+                        <span class="lang-ar hidden">تغذية غير آمنة</span>
+                        <span class="lang-en">Unsafe Feeding Practices</span>
+                    </h3>
+                    <p class="text-gray-700">
+                        <span class="lang-ar hidden">يتم إطعام الحيوانات المفترسة جيفًا نافقة، مما يعرضها لخطر التسمم والأمراض القاتلة.</span>
+                        <span class="lang-en">Predators are being fed carrion carcasses, exposing them to lethal poisoning and disease.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Daily Cost Section -->
+        <section id="cost-section" class="py-16 bg-white/70 rounded-xl shadow-inner my-12">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
+                    <span class="lang-ar hidden">التكلفة اليومية للبقاء على قيد الحياة</span>
+                    <span class="lang-en">The Daily Cost of Survival</span>
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    <span class="lang-ar hidden">الأرقام تكشف حجم الحاجة الماسة. كل يوم يمثل تحديًا لتوفير أبسط متطلبات الحياة.</span>
+                    <span class="lang-en">The numbers reveal the scale of the urgent need. Every day is a challenge to provide the basic requirements for life.</span>
+                </p>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
+                <div class="w-full lg:w-1/2">
+                    <div class="chart-container">
+                        <canvas id="costChart"></canvas>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <p class="text-2xl text-gray-700 mb-4">
+                        <span class="lang-ar hidden">تحتاج الحيوانات إلى حوالي</span>
+                        <span class="lang-en">The animals require approximately</span>
+                    </p>
+                    <p class="text-6xl font-bold text-[#D97706] mb-6">$660</p>
+                    <p class="text-2xl text-gray-700 mb-4">
+                        <span class="lang-ar hidden">يوميًا للطعام فقط.</span>
+                        <span class="lang-en">daily just for food.</span>
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        <span class="lang-ar hidden">الجزء الأكبر من الميزانية يذهب للحوم الضرورية للحيوانات المفترسة للبقاء على قيد الحياة، وهو ما يمثل التحدي المالي الأكبر.</span>
+                        <span class="lang-en">The largest portion of the budget goes to the meat necessary for the predators to survive, representing the biggest financial challenge.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery-section" class="py-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
+                    <span class="lang-ar hidden">صور من قلب المعاناة</span>
+                    <span class="lang-en">Images from the Heart of Suffering</span>
+                </h2>
+                <p class="mt-4 text-gray-600">
+                    <span class="lang-ar hidden">نظرة عن قرب على الأرواح البريئة التي تنتظر مساعدتنا.</span>
+                    <span class="lang-en">A close look at the innocent lives awaiting our help.</span>
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-md">
+                    <img src="2.jpg" alt="Gaza Zoo lions" class="rounded-lg mb-2 object-cover w-full h-64">
+                    <p class="text-center text-gray-700">
+                        <span class="lang-ar hidden">أسود حديقة غزة تبدو منهكة داخل قفصها، وتنتظر الطعام وسط نقص حاد.</span>
+                        <span class="lang-en">Gaza Zoo lions look exhausted inside their cage, waiting for food amid severe shortage.</span>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-md">
+                    <img src="3.jpg" alt="Dogs at the zoo" class="rounded-lg mb-2 object-cover w-full h-64">
+                    <p class="text-center text-gray-700">
+                        <span class="lang-ar hidden">مجموعة من الكلاب تُظهر علامات الجوع واليأس، تتلقى المساعدة من أحد الرعاة.</span>
+                        <span class="lang-en">A group of dogs showing signs of hunger and despair, receiving aid from a caretaker.</span>
+                    </p>
+                </div>
+                <div class="flex flex-col items-center bg-white p-4 rounded-xl shadow-md">
+                    <img src="1.jpg" alt="Monkeys in distress" class="rounded-lg mb-2 object-cover w-full h-64">
+                    <p class="text-center text-gray-700">
+                        <span class="lang-ar hidden">قرود في الأقفاص تُظهر علامات التوتر والضعف نتيجة الظروف القاسية.</span>
+                        <span class="lang-en">Monkeys in cages displaying signs of stress and weakness due to harsh conditions.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Appeal Section -->
+        <section id="appeal-section" class="py-16 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
+                <span class="lang-ar hidden">نداء إنساني وأخلاقي عاجل</span>
+                <span class="lang-en">Urgent Humanitarian and Moral Appeal</span>
+            </h2>
+            <p class="mt-4 text-gray-600 max-w-3xl mx-auto">
+                <span class="lang-ar hidden">إنقاذ هذه الحيوانات واجب لا يمكن تأجيله. ندعوكم للتدخل الفوري من خلال:</span>
+                <span class="lang-en">Saving these animals is an undeferrable duty. We urgently call for immediate intervention through:</span>
+            </p>
+            <div class="mt-10 max-w-4xl mx-auto space-y-6">
+                <div class="bg-white p-6 rounded-xl shadow-md text-left flex items-center gap-4">
+                    <span class="text-4xl">🍲</span>
+                    <div>
+                        <h3 class="font-bold text-xl text-[#D97706]">
+                            <span class="lang-ar hidden">المساعدة الغذائية والبيطرية الفورية</span>
+                            <span class="lang-en">Immediate Food and Veterinary Aid</span>
+                        </h3>
+                        <p class="text-gray-700">
+                            <span class="lang-ar hidden">تأمين شحنات عاجلة من الغذاء المناسب والأدوية اللازمة.</span>
+                            <span class="lang-en">Securing urgent shipments of proper food and necessary medicines.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-left flex items-center gap-4">
+                    <span class="text-4xl">💵</span>
+                    <div>
+                        <h3 class="font-bold text-xl text-[#D97706]">
+                            <span class="lang-ar hidden">الدعم المالي المباشر</span>
+                            <span class="lang-en">Direct Financial Support</span>
+                        </h3>
+                        <p class="text-gray-700">
+                            <span class="lang-ar hidden">توفير الدعم لتغطية الميزانية اليومية لإطعام ورعاية الحيوانات.</span>
+                            <span class="lang-en">Providing support to cover the daily budget for feeding and caring for the animals.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md text-left flex items-center gap-4">
+                    <span class="text-4xl">🚚</span>
+                    <div>
+                        <h3 class="font-bold text-xl text-[#D97706]">
+                            <span class="lang-ar hidden">تأمين الإجلاء الآمن</span>
+                            <span class="lang-en">Securing Safe Evacuation</span>
+                        </h3>
+                        <p class="text-gray-700">
+                            <span class="lang-ar hidden">العمل على إجلاء الحيوانات والعائلة إلى مكان آمن خارج منطقة الخطر.</span>
+                            <span class="lang-en">Working to evacuate the animals and the family to a safe place outside the danger zone.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12">
+                <p class="text-2xl font-bold text-red-600">
+                    <span class="lang-ar hidden">💔 حتى أصغر مساعدة تهم – 1$ يمكن أن ينقذ حياة.</span>
+                    <span class="lang-en">💔 Even the smallest help matters – $1 can save a life.</span>
+                </p>
+                <p class="mt-2 text-lg text-gray-700">
+                    <span class="lang-ar hidden">التبرعات الصغيرة، عند تضافرها، تحدث فرقًا هائلاً.</span>
+                    <span class="lang-en">Small donations, when combined, make a huge difference.</span>
+                </p>
+                <a href="#" class="mt-8 inline-block bg-[#059669] hover:bg-emerald-700 text-white font-bold py-4 px-10 rounded-lg text-xl transition duration-300 shadow-xl">
+                    <span class="lang-ar hidden">تبرع الآن لإنقاذ حياة</span>
+                    <span class="lang-en">Donate Now to Save a Life</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team-section" class="py-16 border-t border-gray-300">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#374151]">
+                    <span class="lang-ar hidden">الفريق الصامد في الميدان</span>
+                    <span class="lang-en">The Resilient Team on the Ground</span>
+                </h2>
+                <p class="mt-4 text-gray-600">
+                    <span class="lang-ar hidden">رغم كل الظروف، هؤلاء هم الأبطال الذين يواصلون رعاية الحيوانات.</span>
+                    <span class="lang-en">Despite all circumstances, these are the heroes who continue caring for the animals.</span>
+                </p>
+            </div>
+            <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+                <ul class="space-y-4 text-lg">
+                    <li>
+                        <span class="lang-ar hidden"><strong>اسم الحديقة:</strong> حديقة حيوان غزة</span>
+                        <span class="lang-en"><strong>Zoo Name:</strong> Gaza Zoo</span>
+                    </li>
+                    <li>
+                        <span class="lang-ar hidden"><strong>المالك والمشرف:</strong> فتحي أحمد جمعة وعائلته</span>
+                        <span class="lang-en"><strong>Owner and Supervisor:</strong> Fathi Ahmed Jumaa & Family</span>
+                    </li>
+                    <li>
+                        <span class="lang-ar hidden"><strong>المشرف البيطري:</strong> د. عايد نجم</span>
+                        <span class="lang-en"><strong>Veterinary Supervisor:</strong> Dr. A'ed Najm</span>
+                    </li>
+                    <li>
+                        <span class="lang-ar hidden"><strong>استشاري بيطري (عن بعد):</strong> د. أمان (<a href="https://dr-aman.com" target="_blank" class="text-amber-600 hover:underline">dr-aman.com</a>)</span>
+                        <span class="lang-en"><strong>Veterinary Consultant (Remote):</strong> Dr. Aman (<a href="https://dr-aman.com" target="_blank" class="text-amber-600 hover:underline">dr-aman.com</a>)</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="text-center py-8 bg-gray-200/50 mt-16">
+        <p class="text-gray-600">
+            <span class="lang-ar hidden">إن مصير هذه الحيوانات بين أيدينا. إنقاذهم ليس مجرد عمل رحمة، بل هو التزام تجاه كل أشكال الحياة.</span>
+            <span class="lang-en">The fate of these animals is in our hands. Saving them is not just an act of mercy, but a commitment to all forms of life.</span>
+        </p>
+    </footer>
+
+    <script>
+        let currentLang = 'en';
+        let costChart = null;
+
+        const langData = {
+            ar: {
+                labels: ['اللحوم', 'الفواكه والخضروات', 'المكسرات والحبوب', 'المياه النظيفة'],
+                dir: 'rtl',
+                font: "'Tajawal', sans-serif"
+            },
+            en: {
+                labels: ['Meat', 'Fruits & Vegetables', 'Nuts/Grains', 'Clean Water'],
+                dir: 'ltr',
+                font: "'Inter', sans-serif"
+            }
+        };
+
+        // Financial data remains the same
+        const rawData = [550, 55, 47.4, 9];
+        const backgroundColors = [
+            '#D97706', // Amber-600 for Meat (highest cost)
+            '#4B5563', // Gray-600
+            '#9CA3AF', // Gray-400
+            '#1F2937'  // Gray-900 
+        ];
+
+        function createOrUpdateChart(lang) {
+            const labels = langData[lang].labels;
+            const font = langData[lang].font;
+
+            if (costChart) {
+                // Update existing chart
+                costChart.data.labels = labels;
+                costChart.options.plugins.legend.labels.font.family = font;
+                costChart.options.plugins.tooltip.bodyFont.family = font;
+                costChart.options.plugins.tooltip.titleFont.family = font;
+                // Important: Update RTL/LTR settings for chart tooltip
+                costChart.options.plugins.tooltip.rtl = lang === 'ar';
+                costChart.options.plugins.tooltip.textDirection = lang === 'ar' ? 'rtl' : 'ltr';
+                costChart.update();
+            } else {
+                // Create new chart
+                const ctx = document.getElementById('costChart').getContext('2d');
+                const chartData = {
+                    labels: labels,
+                    datasets: [{
+                        data: rawData,
+                        backgroundColor: backgroundColors,
+                        borderColor: '#F9FAFB', // Match new background color
+                        borderWidth: 4,
+                        hoverOffset: 8
+                    }]
+                };
+
+                costChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    color: '#1F2937',
+                                    font: {
+                                        family: font,
+                                        size: 14,
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                // Dynamic RTL/LTR configuration
+                                rtl: lang === 'ar',
+                                textDirection: lang === 'ar' ? 'rtl' : 'ltr',
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed !== null) {
+                                            label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed);
+                                        }
+                                        return label;
+                                    }
+                                },
+                                bodyFont: {
+                                    family: font
+                                },
+                                titleFont: {
+                                    family: font
+                                }
+                            }
+                        },
+                        cutout: '60%'
+                    }
+                });
+            }
+        }
+
+        function switchLanguage() {
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            const htmlElement = document.documentElement;
+            const toggleButton = document.getElementById('lang-toggle');
+            
+            htmlElement.setAttribute('lang', currentLang);
+            htmlElement.setAttribute('dir', langData[currentLang].dir);
+
+            // Toggle visibility classes
+            document.querySelectorAll('.lang-ar').forEach(el => {
+                el.classList.toggle('hidden', currentLang === 'en');
+            });
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('hidden', currentLang === 'ar');
+            });
+
+            // Update button text
+            toggleButton.textContent = currentLang === 'en' ? 'عربي' : 'EN';
+
+            // Ensure text alignment adjusts for LTR/RTL in flexible layouts
+            document.querySelectorAll('#appeal-section > .mt-10 > div').forEach(el => {
+                // Check if it's a card in the appeal section
+                if (window.innerWidth >= 768) {
+                    // Adjust flex direction for icon/text layout based on direction
+                    el.style.flexDirection = currentLang === 'ar' ? 'row-reverse' : 'row';
+                }
+            });
+
+            // Adjust text alignment for the text block in the Cost Section
+            document.querySelector('#cost-section .lg\\:text-left').classList.remove('lg:text-right', 'lg:text-left');
+            document.querySelector('#cost-section .lg\\:text-left').classList.add(currentLang === 'ar' ? 'lg:text-right' : 'lg:text-left');
+
+
+            createOrUpdateChart(currentLang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initial chart creation in English (default language)
+            createOrUpdateChart(currentLang);
+
+            // Setup language toggle listener
+            document.getElementById('lang-toggle').addEventListener('click', switchLanguage);
+            
+            // Initial setup for directional alignment on load
+            document.querySelector('#cost-section .lg\\:text-left').classList.add('lg:text-left'); 
+            document.querySelectorAll('#appeal-section > .mt-10 > div').forEach(el => {
+                el.style.flexDirection = 'row'; // Default English/LTR
+            });
+
+        });
+    </script>
+</body>
+</html>
